@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthy Drinking Water Refilling Station — Company Profile</title>
+<style>
+  @page { size: A4; margin: 12mm 12mm 10mm 12mm; }
+  :root{
+    --blue:#0066CC; --blue-dark:#004E9E; --teal:#00B4A6; --teal-light:#7FD4E8;
+    --amber:#FFB800; --ice:#E8F6FF; --ink:#0B2540; --muted:#4A6580; --line:#D6E8F7;
+  }
+  *{box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+  body{margin:0;font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--ink);background:#F5FAFE;line-height:1.55;font-size:15px}
+  .sheet{max-width:860px;margin:0 auto;background:#fff;padding:0 0 1px}
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(145deg,#0A5FCB 0%,#00B4A6 100%);color:#fff;text-align:center;padding:44px 44px 40px;border-radius:0 0 26px 26px;page-break-inside:avoid;page-break-after:avoid}
+  .hero img{width:130px;height:130px;border-radius:50%;background:#fff;padding:8px;display:block;margin:0 auto 18px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .hero h1{font-size:33px;line-height:1.16;margin:0 0 8px;letter-spacing:-.4px}
+  .hero .sub{font-size:16px;margin:0 0 20px;opacity:.96}
+  .pill{display:inline-block;background:var(--amber);color:#3B2600;font-weight:700;font-size:14px;padding:9px 20px;border-radius:999px}
+
+  /* ---------- SECTIONS ---------- */
+  .block{margin:26px 0 0;padding:0 44px}
+  .kicker{text-transform:uppercase;letter-spacing:2.4px;font-size:10.5px;font-weight:800;color:var(--teal);margin:0 0 8px}
+  h2{font-size:24px;line-height:1.25;margin:0 0 12px;letter-spacing:-.2px;page-break-after:avoid}
+  h2 .num{color:var(--teal);font-weight:800;margin-right:8px}
+  h3{font-size:16px;margin:18px 0 6px;color:var(--blue);page-break-after:avoid}
+  p{margin:0 0 12px}
+  .lead{color:var(--muted);font-size:15.5px}
+
+  .panel{background:var(--ice);border-radius:16px;padding:26px 30px;page-break-inside:avoid}
+  .panel .kicker{margin-bottom:6px}
+
+  /* ---------- BENEFIT GRID ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;page-break-inside:avoid;margin-top:14px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+  .card .n{flex:0 0 26px;height:26px;border-radius:8px;background:var(--teal);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+  .card h4{margin:0 0 2px;font-size:14.5px}
+  .card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.45}
+  .card.accent{background:var(--blue);border-color:var(--blue)}
+  .card.accent h4{color:#fff}
+  .card.accent p{color:#DCEEFF}
+  .card.accent .n{background:var(--amber);color:#3B2600}
+
+  /* ---------- STEP FLOW ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;page-break-inside:avoid}
+  .step{text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 8px 14px}
+  .step svg{width:30px;height:30px;display:block;margin:0 auto 8px}
+  .step b{display:block;font-size:12.5px;color:var(--blue);line-height:1.3;margin-bottom:3px}
+  .step span{font-size:11.5px;color:var(--muted);line-height:1.35;display:block}
+
+  /* ---------- TABLE ---------- */
+  table{width:100%;border-collapse:collapse;margin:12px 0 0;page-break-inside:avoid;font-size:14px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line)}
+  th{background:var(--ice);color:var(--blue);font-weight:700}
+  tr:last-child td{border-bottom:none}
+
+  /* ---------- CHECKS ---------- */
+  .checks{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:8px;page-break-inside:avoid}
+  .checks li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 13px;font-weight:600;font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
+  .checks li::before{content:"";flex:0 0 15px;height:15px;margin-top:2px;border-radius:50%;background:var(--teal);
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E");
+    background-size:11px 11px;background-repeat:no-repeat;background-position:center}
+
+  /* ---------- VERSE ---------- */
+  .verse{border-left:4px solid var(--amber);background:#FFFBEF;padding:16px 20px;border-radius:0 12px 12px 0;font-style:italic;color:#5A4500;page-break-inside:avoid;font-size:14.5px}
+  .verse small{display:block;font-style:normal;margin-top:8px;font-weight:700;color:#8A6D00;font-size:13px}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink);color:#fff;text-align:center;padding:34px 44px 38px;margin-top:26px;border-radius:22px;page-break-inside:avoid}
+  .contact h2{color:#fff;font-size:22px;margin:0 0 16px}
+  .contact .kicker{color:var(--teal-light);margin-bottom:6px}
+  .phones{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:0 0 14px}
+  .phones a{background:var(--amber);color:#3B2600;font-weight:800;text-decoration:none;padding:11px 20px;border-radius:11px;font-size:15px;display:inline-flex;align-items:center;gap:8px}
+  .phones svg{width:17px;height:17px}
+  .addr{font-size:13.5px;opacity:.88;margin:0}
+
+  .foot{text-align:center;color:var(--muted);font-size:11.5px;padding:14px 0 6px}
+
+  @media(max-width:720px){
+    .hero{padding-left:24px;padding-right:24px}
+    .block{padding:0 22px}
+    .grid,.steps,.checks{grid-template-columns:1fr}
+    .hero h1{font-size:26px}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <img src="assets/logo.svg" alt="Healthy Drinking Water Refilling Station logo">
+    <h1>Healthy Drinking Water<br>Refilling Station</h1>
+    <p class="sub">Mineral &amp; Alkaline Water — Clean, Safe, Healthy</p>
+    <span class="pill">Your family deserves clean, safe, and healthy drinking water.</span>
+  </header>
+
+  <div class="block">
+    <p class="kicker">Who we are</p>
+    <h2>Parañaque's trusted source of healthy water, delivered rain or shine.</h2>
+    <p class="lead">Since September 2020, Healthy Drinking Water Refilling Station has been helping families stay hydrated, balanced, and healthy — with water that is not just clean, but <strong>certified clean</strong>.</p>
+    <p class="lead">We don't sell water. We sell health, one container at a time.</p>
+  </div>
+
+  <div class="block">
+    <div class="panel">
+      <p class="kicker">Why healthy water matters</p>
+      <h2><span class="num">01</span>Your body is mostly water.</h2>
+      <p class="lead">What goes into your glass goes into your cells, your blood, your brain.</p>
+      <p class="lead">Every day, stress, processed food, sugary drinks, and pollution make your body more acidic. Over time, that acid drains your energy, weakens your bones, and leaves you feeling tired and bloated.</p>
+      <p class="lead" style="margin:0">That's why we don't just filter water. We make it <strong>healthy</strong> — mineral-rich and alkaline — so it works <em>with</em> your body, not against it.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="kicker">The difference</p>
+    <h2><span class="num">07</span>Ways alkaline water helps you stay healthy.</h2>
+    <div class="grid">
+      <div class="card"><span class="n">1</span><div><h4>Weight loss</h4><p>Drink alkaline water to support healthy weight goals.</p></div></div>
+      <div class="card"><span class="n">2</span><div><h4>Detoxification</h4><p>Filter out toxic metals that build up over time.</p></div></div>
+      <div class="card"><span class="n">3</span><div><h4>pH balance</h4><p>Fight metabolic syndrome caused by everyday acidity.</p></div></div>
+      <div class="card"><span class="n">4</span><div><h4>Bone health</h4><p>Help tackle bone loss with minerals your skeleton needs.</p></div></div>
+      <div class="card"><span class="n">5</span><div><h4>Better hydration</h4><p>Tastes sweeter — so you actually drink more.</p></div></div>
+      <div class="card"><span class="n">6</span><div><h4>Heart health</h4><p>Your best natural source of magnesium.</p></div></div>
+      <div class="card"><span class="n">7</span><div><h4>Energy &amp; endurance</h4><p>Fight off lactic acid — recover faster, feel lighter.</p></div></div>
+      <div class="card accent"><span class="n">★</span><div><h4>Simple rule</h4><p>Clean water keeps you alive. Healthy water keeps you thriving.</p></div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="kicker">Our products</p>
+    <h2><span class="num">02</span>Mineral and alkaline — both in every container.</h2>
+    <h3>Mineral Water</h3>
+    <p class="lead">Helps flush out body toxins — fatty acids from fatty foods, sugar acid from sweetened drinks, uric acids from beans and organ meats, and citric acids. Keeps your body's pH balanced and your essential minerals — calcium, magnesium, potassium, sodium — working. Safe for all ages. Helps prevent osteoporosis.</p>
+    <h3>Alkaline Water</h3>
+    <p class="lead">Mineral water with a higher, body-friendly pH. Reaches deeper into cells for hydration, balances acidity, and gives your body the magnesium it needs for heart and bone health.</p>
+    <h3>Containers</h3>
+    <p class="lead" style="margin:0">Drinking water containers in different colors are available for only <strong>Php 200 per piece</strong>. Prices may change without prior notice and government taxes are excluded.</p>
+  </div>
+
+  <div class="block">
+    <div class="panel">
+      <p class="kicker">How we make it</p>
+      <h2><span class="num">24</span>Levels of filtration. 10,000 gallons a day.</h2>
+      <p class="lead">Our purifying equipment uses Micro Filtration Technology with a UV Sterilizer and a 24-level Mineral &amp; Alkaline filtration system — producing up to 10,000 gallons per day.</p>
+      <div class="steps">
+        <div class="step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>
+          <b>Micro Filtration</b><span>Removes sediment &amp; particles</span>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00B4A6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+          <b>UV Sterilizer</b><span>Kills bacteria &amp; microbes</span>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0066CC" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3.2 3.6 6 6.7 6 9.9a6 6 0 0 1-12 0c0-3.2 2.8-6.3 6-9.9z"/></svg>
+          <b>24-Stage Mineral &amp; Alkaline</b><span>Restores minerals, balances pH</span>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00B4A6" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v9H2zM13 10h4l4 3.5V16h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+          <b>Fresh Delivery</b><span>Door to door, rain or shine</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="kicker">Certified safe</p>
+    <h2><span class="num">✓</span>Tested every month. Passed every time.</h2>
+    <p class="lead">We test our water every month with Boyer Environmental Water Testing Laboratory, a DOH-accredited lab — and we consistently <strong>PASS all parameters</strong>: physical, chemical, biological, bacteriological, and radiological, per the Philippine National Standards for Drinking-Water.</p>
+    <table>
+      <tr><th>Permit / Certificate</th><th>Status</th></tr>
+      <tr><td>Certificate of Potability</td><td>Issued &amp; renewed yearly</td></tr>
+      <tr><td>Sanitary Clearance (delivery vehicle)</td><td>Displayed in plain view</td></tr>
+      <tr><td>Barangay Permit</td><td>Renewed yearly</td></tr>
+      <tr><td>Mayor's Permit</td><td>Renewed yearly</td></tr>
+      <tr><td>DTI Business Name Permit</td><td>Renewed yearly</td></tr>
+      <tr><td>Sanitary Permit</td><td>Renewed yearly</td></tr>
+      <tr><td>BIR Certificate of Registration</td><td>Active</td></tr>
+    </table>
+    <p style="margin:14px 0 0;font-weight:700;color:var(--blue)">Government compliance isn't paperwork for us. It's proof your water is safe.</p>
+  </div>
+
+  <div class="block">
+    <p class="kicker">Our promise</p>
+    <h2><span class="num">✓</span>The Healthy Drinking Water promise</h2>
+    <ul class="checks">
+      <li>Mineral &amp; alkaline in every container</li>
+      <li>24-level filtration + UV sterilizer</li>
+      <li>DOH-compliant, monthly lab-tested</li>
+      <li>Door-to-door delivery, rain or shine</li>
+      <li>Operating since September 2020</li>
+      <li>Colored containers (Php 200/pc)</li>
+      <li>All permits renewed yearly</li>
+      <li>Staff trained in safety &amp; hygiene (PPE)</li>
+    </ul>
+  </div>
+
+  <div class="block">
+    <div class="verse">
+      "When we put God first, everything else falls into their proper place."
+      <small>Work willingly at whatever you do, as though you were working for the Lord rather than for people. — Colossians 3:23</small>
+    </div>
+  </div>
+
+  <footer class="contact">
+    <p class="kicker">Work with us</p>
+    <h2>Ready to deliver quality &amp; safe drinking water.<br>Rain or shine.</h2>
+    <div class="phones">
+      <a href="tel:+639476230882"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>Smart 0947 623 0882</a>
+      <a href="tel:+639270485948"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>Globe 0927 048 5948</a>
+    </div>
+    <p class="addr">6797 Tramo St., San Dionisio, Parañaque City<br>Near Las Piñas Manuyo Uno boundary, beside Iglesia ni Cristo Church</p>
+  </footer>
+
+  <p class="foot">Thank you for trusting Healthy Drinking Water Refilling Station.</p>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-label="Healthy Drinking Water Refilling Station logo placeholder">
+  <circle cx="200" cy="200" r="195" fill="#0066CC"/>
+  <circle cx="200" cy="200" r="150" fill="#00B4A6"/>
+  <circle cx="200" cy="200" r="140" fill="#E8F6FF"/>
+  <!-- glass -->
+  <path d="M165 160 L175 300 Q200 312 225 300 L235 160 Z" fill="#FFFFFF" stroke="#0066CC" stroke-width="6"/>
+  <path d="M172 215 L228 215 Q225 295 200 300 Q175 295 172 215 Z" fill="#7FD4E8"/>
+  <!-- pour -->
+  <path d="M240 105 Q252 130 246 160 Q242 190 232 205" fill="none" stroke="#0066CC" stroke-width="10" stroke-linecap="round"/>
+  <text x="200" y="345" font-family="Poppins, Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0066CC" text-anchor="middle">HEALTHY DRINKING WATER</text>
+  <text x="200" y="368" font-family="Poppins, Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#00B4A6" text-anchor="middle" letter-spacing="2">REFILLING STATION</text>
+</svg>

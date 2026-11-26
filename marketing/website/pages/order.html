@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order Water Online | Healthy Drinking Water Refilling Station</title>
+<meta name="description" content="Order mineral & alkaline water online for door-to-door delivery in Parañaque. Call Smart 0947 623 0882 or Globe 0927 048 5948.">
+<meta name="theme-color" content="#0066CC">
+<link rel="icon" type="image/svg+xml" href="../assets/logo.png">
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  .order-form{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--blue)}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit}
+  .field textarea{resize:vertical;min-height:80px}
+  .field .hint{font-size:12px;color:var(--muted);margin-top:4px}
+  .radio-row{display:flex;gap:12px;flex-wrap:wrap}
+  .radio-row label{flex:1;min-width:140px;background:var(--ice);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-weight:600;cursor:pointer;font-size:14px}
+  .radio-row input{margin-right:6px}
+  .qty-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .qty-row button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);background:#fff;font-size:18px;font-weight:800;cursor:pointer;color:var(--blue)}
+  .qty-row button:hover{background:var(--ice)}
+  .qty-row .qty{min-width:36px;text-align:center;font-weight:700}
+  .summary{background:var(--ice);border-radius:12px;padding:16px 20px;margin:18px 0;font-size:15px}
+  .summary b{color:var(--blue)}
+  .success{display:none;background:#E7F7EF;border:1px solid #B7E4C7;border-radius:12px;padding:16px 20px;margin-top:18px;font-weight:600;color:#0B7A4B}
+  .error{display:none;background:#FDECEA;border:1px solid #F5C6C0;border-radius:12px;padding:16px 20px;margin-top:18px;font-weight:600;color:#B42318}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header>
+  <nav class="container nav">
+    <a href="../index.html"><img class="nav-logo" src="../assets/logo.png" alt="Healthy Drinking Water Refilling Station"></a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#products">Products</a>
+      <a href="order.html">Order Online</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="btn btn-primary nav-cta" href="tel:+639476230882">Call for Delivery</a>
+    <a class="btn btn-primary mobile-call" href="tel:+639476230882">Call</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero" style="padding:48px 24px 52px">
+    <div class="logo-wrap" style="width:96px;height:96px"><img src="../assets/logo.png" alt="Logo"></div>
+    <h1>Order Water Online</h1>
+    <p>Fill out the form below and we'll call you to confirm your delivery. Rain or shine.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="order-form">
+        <form id="orderForm" novalidate>
+
+          <div class="field">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Juan dela Cruz">
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="09XX-XXX-XXXX">
+            <p class="hint">We'll call this number to confirm your order.</p>
+          </div>
+
+          <div class="field">
+            <label for="address">Delivery Address *</label>
+            <textarea id="address" name="address" required placeholder="Street, barangay, city"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Water Type *</label>
+            <div class="radio-row">
+              <label><input type="radio" name="waterType" value="Mineral" required> Mineral</label>
+              <label><input type="radio" name="waterType" value="Alkaline" required> Alkaline</label>
+              <label><input type="radio" name="waterType" value="Both" required> Both</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="containers">Number of Containers *</label>
+            <input type="number" id="containers" name="containers" min="1" max="50" required placeholder="e.g. 5">
+          </div>
+
+          <div class="field">
+            <label for="colored">Colored Containers (Php 200 each)</label>
+            <input type="number" id="colored" name="colored" min="0" max="20" placeholder="0">
+          </div>
+
+          <div class="field">
+            <label for="date">Preferred Delivery Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+
+          <div class="field">
+            <label for="time">Preferred Time</label>
+            <select id="time" name="time">
+              <option value="">Select a time</option>
+              <option value="Morning">Morning (8AM - 12NN)</option>
+              <option value="Afternoon">Afternoon (12NN - 5PM)</option>
+              <option value="Evening">Evening (5PM - 8PM)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="notes">Notes / Special Instructions</label>
+            <textarea id="notes" name="notes" placeholder="Gate code, landmark, etc."></textarea>
+          </div>
+
+          <div class="summary" id="summary">
+            <b>Order Summary</b>
+            <div id="summaryLines">Fill out the form to see your order summary.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Submit Order Request</button>
+          <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:10px">
+            We will call you to confirm. No payment taken online.
+          </p>
+
+          <div class="success" id="successMsg">
+            <div id="successText">Almost done — choose how to send your order:</div>
+            <p style="margin:12px 0 0;display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn btn-secondary" id="sendSms" href="#">Send by SMS</a>
+              <a class="btn btn-secondary" id="sendWa" href="#" rel="noopener">Send by WhatsApp</a>
+            </p>
+            <p style="margin:12px 0 0;font-size:13px;font-weight:400;color:#0B7A4B">
+              Or call us directly: <a href="tel:+639476230882">0947 623 0882</a> / <a href="tel:+639270485948">0927 048 5948</a>
+            </p>
+          </div>
+          <div class="error" id="errorMsg">
+            Please fill in all required fields marked with *.
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Healthy Drinking Water<br>Refilling Station</h4>
+        <p style="color:#9FB3CC;font-size:14px;margin:0">Mineral &amp; alkaline water, delivered since September 2020.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Order by Phone</h4>
+        <ul>
+          <li><a href="tel:+639476230882">Smart 0947 623 0882</a></li>
+          <li><a href="tel:+639270485948">Globe 0927 048 5948</a></li>
+          <li>Door-to-door delivery</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li>6797 Tramo St., San Dionisio</li>
+          <li>Parañaque City</li>
+          <li>Near Las Piñas boundary, INC Church</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#products">Products</a></li>
+          <li><a href="order.html">Order Online</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Healthy Drinking Water Refilling Station. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+var form = document.getElementById('orderForm');
+var summaryLines = document.getElementById('summaryLines');
+
+function updateSummary(){
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var address = document.getElementById('address').value.trim();
+  var waterType = form.querySelector('input[name="waterType"]:checked');
+  var containers = document.getElementById('containers').value;
+  var colored = document.getElementById('colored').value || 0;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+
+  var lines = [];
+  if(name) lines.push('Name: <b>' + name + '</b>');
+  if(phone) lines.push('Phone: <b>' + phone + '</b>');
+  if(address) lines.push('Address: <b>' + address + '</b>');
+  if(waterType) lines.push('Water type: <b>' + waterType.value + '</b>');
+  if(containers) lines.push('Containers: <b>' + containers + '</b>');
+  if(colored && colored > 0) lines.push('Colored containers: <b>' + colored + ' (Php ' + (colored*200) + ')</b>');
+  if(date) lines.push('Date: <b>' + date + '</b>');
+  if(time) lines.push('Time: <b>' + time + '</b>');
+
+  summaryLines.innerHTML = lines.length ? lines.join('<br>') : 'Fill out the form to see your order summary.';
+}
+
+form.addEventListener('input', updateSummary);
+form.addEventListener('change', updateSummary);
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  var success = document.getElementById('successMsg');
+  var error = document.getElementById('errorMsg');
+  var successText = document.getElementById('successText');
+  var btnSms = document.getElementById('sendSms');
+  var btnWa = document.getElementById('sendWa');
+
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var address = document.getElementById('address').value.trim();
+  var waterType = form.querySelector('input[name="waterType"]:checked');
+  var containers = document.getElementById('containers').value;
+  var colored = document.getElementById('colored').value || 0;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+  var notes = document.getElementById('notes').value.trim();
+
+  if(!name || !phone || !address || !waterType || !containers){
+    error.style.display = 'block';
+    success.style.display = 'none';
+    return;
+  }
+
+  var msg = "Order from Healthy Drinking Water Refilling Station:\n";
+  msg += "Name: " + name + "\n";
+  msg += "Phone: " + phone + "\n";
+  msg += "Address: " + address + "\n";
+  msg += "Water type: " + waterType.value + "\n";
+  msg += "Containers: " + containers + "\n";
+  if(colored > 0) msg += "Colored containers: " + colored + "\n";
+  if(date) msg += "Date: " + date + "\n";
+  if(time) msg += "Time: " + time + "\n";
+  if(notes) msg += "Notes: " + notes + "\n";
+
+  var smsLink = "sms:+639476230882?body=" + encodeURIComponent(msg);
+  var waLink = "https://wa.me/639476230882?text=" + encodeURIComponent(msg);
+
+  btnSms.href = smsLink;
+  btnWa.href = waLink;
+
+  error.style.display = 'none';
+  success.style.display = 'block';
+  successText.textContent = "Order ready — send it by SMS or WhatsApp:";
+  form.reset();
+  updateSummary();
+});
+</script>
+</body>
+</html>
